@@ -22,11 +22,6 @@ labels: "🛠 goal: fix, 🚦 status: awaiting triage, 💻 aspect: code, 🟧 p
 
 ## Environment
 <!-- Please complete this, unless you are certain the problem is not environment specific. -->
- - Device: (_eg._ iPhone Xs; laptop)
- - OS: (_eg._ iOS 13.5; Fedora 32)
- - Browser: (_eg._ Safari; Firefox)
- - Version: (_eg._ 13; 73)
- - Other info: (_eg._ display resolution, ease-of-access settings)
 
 ## Additional context
 <!-- Add any other context about the problem here; or delete the section entirely. -->
