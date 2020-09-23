@@ -1,33 +1,36 @@
-Issue tracker is **ONLY** used for reporting bugs. New features should be discussed on our slack channel. Please use [stackoverflow](https://stackoverflow.com) for supporting issues.
+---
+name: Bug report
+about: Create a report to help us improve
+labels: "🛠 goal: fix, 🚦 status: awaiting triage, 💻 aspect: code, 🟧 priority: high"
+---
 
-<!--- Provide a general summary of the issue in the Title above -->
+## Description
+<!-- Concisely describe the bug. -->
 
-## Expected Behavior
-<!--- Tell us what should happen -->
+## Reproduction
+<!-- Provide detailed steps to reproduce the bug -->
+1. <!-- Step 1 ... -->
+2. <!-- Step 2 ... -->
+3. <!-- Step 3 ... -->
+4. See error.
 
-## Current Behavior
-<!--- Tell us what happens instead of the expected behavior -->
+## Expectation
+<!-- Concisely describe what you expected to happen. -->
 
-## Possible Solution
-<!--- Not obligatory, but suggest a fix/reason for the bug, -->
+## Screenshots
+<!-- Add screenshots to show the problem; or delete the section entirely. -->
 
-## Steps to Reproduce
-<!--- Provide a link to a live example, or an unambiguous set of steps to -->
-<!--- reproduce this bug. Include code to reproduce, if relevant -->
-1.
-2.
-3.
-4.
+## Environment
+<!-- Please complete this, unless you are certain the problem is not environment specific. -->
+ - Device: (_eg._ iPhone Xs; laptop)
+ - OS: (_eg._ iOS 13.5; Fedora 32)
+ - Browser: (_eg._ Safari; Firefox)
+ - Version: (_eg._ 13; 73)
+ - Other info: (_eg._ display resolution, ease-of-access settings)
 
-## Context (Environment)
-<!--- How has this issue affected you? What are you trying to accomplish? -->
-<!--- Providing context helps us come up with a solution that is most useful in the real world -->
+## Additional context
+<!-- Add any other context about the problem here; or delete the section entirely. -->
 
-<!--- Provide a general summary of the issue in the Title above -->
-
-## Detailed Description
-<!--- Provide a detailed description of the change or addition you are proposing -->
-
-## Possible Implementation
-<!--- Not obligatory, but suggest an idea for implementing addition or change -->
-
+## Resolution
+<!-- Replace the [ ] with [x] to check the box. -->
+- [ ] I would be interested in resolving this bug.
