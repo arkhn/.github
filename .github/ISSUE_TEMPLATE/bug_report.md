@@ -27,5 +27,4 @@ labels: "🛠 goal: fix, 🚦 status: awaiting triage, 💻 aspect: code, 🟧 p
 <!-- Add any other context about the problem here; or delete the section entirely. -->
 
 ## Resolution
-<!-- Replace the [ ] with [x] to check the box. -->
-- [ ] I would be interested in resolving this bug.
+<!-- Bug fix suggestion -->
