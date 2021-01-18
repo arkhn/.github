@@ -1,21 +1,21 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-labels: "✨ goal: improvement, 🚦 status: awaiting triage, 💻 aspect: code, 🟩 priority: low"
+assignees: clementjumel
 ---
 
-## Problem
-<!-- Describe a problem solved by this feature; or delete the section entirely. -->
+<!-- Please, add Pypa as project, otherwise the issue might not be taken into consideration. -->
+<!-- You can also change the assignee, when needed. -->
+<!-- To help us with issues triage, you can also use the relevant labels. This includes especially: -->
+<!-- A priority label: from p0 to p4; -->
+<!-- A category label: feature, enhance, fix, doc; -->
+<!-- The relevant package(s) label(s): pypa-api, pypa-front, pyckaxe, pylone, pyoner, pyramid, pyrana. -->
 
 ## Description
-<!-- Describe the feature and how it solves the problem. -->
-
-## Alternatives
-<!-- Describe any alternative solutions or features you have considered. How is this feature better? -->
-
-## Additional context
-<!-- Add any other context about the feature here; or delete the section entirely. -->
+<!-- Describe the feature and what it solves. -->
 
 ## Implementation
-<!-- Replace the [ ] with [x] to check the box. -->
-- [ ] I would be interested in implementing this feature.
+<!-- Describe in more details the implementation steps (e.g. the functions to add, the tests, etc.). -->
+<!-- Replace the [ ] with [x] to check the box when needed. -->
+- [ ] First step...
+- [ ] Second step...
