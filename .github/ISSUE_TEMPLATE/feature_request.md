@@ -1,11 +1,10 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-assignees: clementjumel
 ---
 
 <!-- Please, add Pypa as project, otherwise the issue might not be taken into consideration. -->
-<!-- You can also change the assignee, when needed. -->
+<!-- You can also specify an assignee, if you know who should be in charge of the issue. -->
 <!-- To help us with issues triage, you can also use the relevant labels. This includes especially: -->
 <!-- A priority label: from p0 to p4; -->
 <!-- A category label: feature, enhance, fix, doc; -->
