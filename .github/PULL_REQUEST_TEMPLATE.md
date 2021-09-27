@@ -15,10 +15,10 @@ Fixes #[issue number] by @[issue author]
 
 ## Definition of Done
 
-- [] I followed the [Arkhn Code Book](https://www.notion.so/arkhn/Arkhn-Code-Book-23ac18a8af7343d0a3f61f1c9ef7400c) (I swear!).
-- [] I have written tests for the code I added or updated.
-- [] I have updated the documentation according to my changes.
-- [] I have updated the deployment configuration if needed.
+- [ ] I followed the [Arkhn Code Book](https://www.notion.so/arkhn/Arkhn-Code-Book-23ac18a8af7343d0a3f61f1c9ef7400c) (I swear!).
+- [ ] I have written tests for the code I added or updated.
+- [ ] I have updated the documentation according to my changes.
+- [ ] I have updated the deployment configuration if needed.
 
 ## Tests
 
