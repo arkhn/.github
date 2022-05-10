@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-labels: "type/feature, type/improvement"
+labels: "type/feature"
 ---
 
 ## Problem
@@ -18,4 +18,4 @@ labels: "type/feature, type/improvement"
 
 ## Implementation
 <!-- Replace the [ ] with [x] to check the box. -->
-- [ ] I would be interested in implementing this feature.
+- [ ] First step...
