@@ -1,0 +1,50 @@
+# This re-usable workflow assigns a GitHub project to an issue.
+#
+# This workflow is directly adapted from:
+# https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.
+
+on:
+  workflow_call:
+    inputs:
+      project_number:
+        required: true
+        type: string
+        description: "Number of the project to assign the issue to"
+
+jobs:
+  project:
+    name: Project assignment
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    env:
+      GITHUB_TOKEN: ${{ secrets.PROJECT_GITHUB_TOKEN }}
+      ORGANIZATION: arkhn
+      PROJECT_NUMBER: ${{ inputs.project_number }}
+
+    steps:
+      - name: Get project identifier
+        run: |
+          echo 'PROJECT_ID='$(
+            gh api graphql -f query='
+              query($organization: String!, $project_number: Int!) {
+                organization(login: $organization){
+                  projectV2(number: $project_number) {
+                    id
+                  }
+                }
+              }
+            ' -f organization=$ORGANIZATION -F project_number=$PROJECT_NUMBER --jq '.data.organization.projectV2.id'
+          ) >> $GITHUB_ENV
+
+      - name: Assign project
+        env:
+          CONTENT_ID: ${{ github.event.issue.node_id }}
+        run: |
+          gh api graphql -f query='
+            mutation($project_id:ID!, $content_id:ID!) {
+              addProjectV2ItemById(input: {projectId: $project_id, contentId: $content_id}) {
+                item {
+                  id
+                }
+            }
+          }' -f project_id=$PROJECT_ID -f content_id=$CONTENT_ID
