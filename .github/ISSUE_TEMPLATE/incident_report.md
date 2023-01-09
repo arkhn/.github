@@ -7,7 +7,6 @@ labels: "type/incident, prio/high"
 ## Description
 
 <!-- Concisely describe the incident. -->
-<!-- TODO -->
 
 ## Classification and qualification
 
@@ -49,7 +48,7 @@ labels: "type/incident, prio/high"
 
 ## Root cause of the incident
 
-<!-- If already know, provide the root cause of the incident -->
+<!-- If already known, provide the root cause of the incident -->
 
 Unknown
 
@@ -57,7 +56,8 @@ Unknown
 
 <!-- List any corrective action in progress or already done -->
 
-- [ ] <!-- TODO -->
+- [ ] <!-- First step... -->
+- [ ] <!-- Second step... -->
 
 <!--
 By default:
