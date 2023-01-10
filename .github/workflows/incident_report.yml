@@ -1,0 +1,19 @@
+# This workflow assigns to every issue (re)opened or labeled with label type/incident the Incident Report project.
+
+name: Project Incident assignment
+
+on:
+  issues:
+    types:
+      - opened
+      - reopened
+      - labeled
+
+jobs:
+  incident-report:
+    if: ${{ github.event.label.name == 'type/incident' }}
+    name: Project assignment (Incident Report)
+    uses: arkhn/.github/.github/workflows/project.yml@96eb3f490c2bedc184eaa0f9684282b7e8214db3
+    with:
+      project_number: 24 # Incident Report project
+    secrets: inherit
