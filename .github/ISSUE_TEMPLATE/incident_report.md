@@ -67,3 +67,20 @@ By default:
 - Resolution date is the date of closing of the issue
 If this is not the case, please update the Description accordingly.
 -->
+
+<!--
+Part to be completed by the RSSI
+
+## Follow-up on the incident
+
+### Action plan
+- [ ] Pre-qualification approved or corrected
+- [ ] Action plan validated
+- [ ] Action plan completed
+
+### Communication 
+
+- [ ] Activation of the crisis unit 
+- [ ] CNIL notification
+- [ ] Client notification
+-->
