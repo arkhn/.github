@@ -6,6 +6,8 @@ labels: "type/incident, prio/high"
 
 ## Description
 
+⚠️ **If you have any suspicion that personal data is impacted, get in touch with the DPO and the RSSI as soon as possible, they will provide you additional guidance**
+
 <!-- Concisely describe the incident. -->
 
 ## Classification and qualification
