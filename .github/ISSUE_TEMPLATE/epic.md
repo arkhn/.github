@@ -26,6 +26,6 @@ In order to ...
 <!-- Explain your expectations  -->
 
 
-## Technical leads (Optional)
+## Related issues
 
-<!-- Suggests ways to resolve this issue -->
+<!-- Add any related issues. -->
