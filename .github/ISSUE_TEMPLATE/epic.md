@@ -5,14 +5,27 @@ labels: "type/feature"
 type: "epic"
 ---
 
-## Summary
-<!-- Describe briefly the epic ; or delete the section entirely. -->
+## User story statement (Mandatory)
 
-## Description
-<!-- Describe the epic and the context. -->
+<!-- Describe the user story -->
 
-## Additional context
-<!-- Add any other context about the feature here; or delete the section entirely. -->
+As ...
 
-## Related issues
-<!-- Add any related issues. -->
+I wish to ...
+
+In order to ...
+
+
+## Context (Optional)
+
+<!-- Give additional context  -->
+
+
+## Acceptance tests (Mandatory)
+
+<!-- Explain your expectations  -->
+
+
+## Technical leads (Optional)
+
+<!-- Suggests ways to resolve this issue -->

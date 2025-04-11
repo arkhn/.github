@@ -4,18 +4,27 @@ about: Suggest an idea for this project
 labels: "type/feature"
 ---
 
-## Problem
-<!-- Describe a problem solved by this feature; or delete the section entirely. -->
+## User story statement (Mandatory)
 
-## Description
-<!-- Describe the feature and how it solves the problem. -->
+<!-- Describe the user story -->
 
-## Alternatives
-<!-- Describe any alternative solutions or features you have considered. How is this feature better? -->
+As ...
 
-## Additional context
-<!-- Add any other context about the feature here; or delete the section entirely. -->
+I wish to ...
 
-## Implementation
-<!-- Replace the [ ] with [x] to check the box. -->
-- [ ] First step...
+In order to ...
+
+
+## Context (Optional)
+
+<!-- Give additional context  -->
+
+
+## Acceptance tests (Mandatory)
+
+<!-- Explain your expectations  -->
+
+
+## Technical leads (Optional)
+
+<!-- Suggests ways to resolve this issue -->

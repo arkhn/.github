@@ -4,5 +4,27 @@ about: Task for mapping a data from a source database in a hospital
 labels: "type/mapping"
 ---
 
-## Context
-<!-- Describe the context of the mapping ; or delete the section entirely. -->
+## User story statement (Mandatory)
+
+<!-- Describe the user story -->
+
+As ...
+
+I wish to ...
+
+In order to ...
+
+
+## Context (Optional)
+
+<!-- Give additional context  -->
+
+
+## Acceptance tests (Mandatory)
+
+<!-- Explain your expectations  -->
+
+
+## Technical leads (Optional)
+
+<!-- Suggests ways to resolve this issue -->
