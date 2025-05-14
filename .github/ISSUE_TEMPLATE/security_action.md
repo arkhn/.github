@@ -2,7 +2,7 @@
 name: Security action (HDS)
 about: Relates to an action to take to mitigate a risk or to fix non-conformities
 title: "[HDS]: "
-labels: ["type/hds"]
+type: "HDS"
 ---
 
 ## Due date
