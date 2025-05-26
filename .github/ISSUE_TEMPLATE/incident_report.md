@@ -2,6 +2,7 @@
 name: Incident report
 about: Report an incident which affects Arkhn's activity including security
 labels: "type/incident, prio/high"
+projects: ["arkhn/24"]
 ---
 
 ## Description
