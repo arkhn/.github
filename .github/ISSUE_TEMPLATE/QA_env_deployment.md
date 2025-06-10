@@ -1,7 +1,7 @@
 # Description 
 <!-- Describe the particularity of this env if necessary -->
 
-# Test acceptance
+# Acceptance tests
 <!-- Mandatory -->
 
 Infra team:
@@ -23,9 +23,7 @@ Infra team:
     - keycloak (admin)
 - [] Verify the metrics are pushed in AZmonitoring
 - [] Verify the TLS is configured (no auto-signed certificate)
-- [] Create the repository dagster-code-besancon on github
-- [] Create arkhn-platform-dagster-user-deployments-k8s-dagster-code on argocd
-
+- [] Create the corresponding repository dagster-code- on dockerhub
 
 Data team:
 - [] Connection to the platform has been tested
