@@ -4,27 +4,29 @@ about: Suggest an idea for this project
 labels: "type/feature"
 ---
 
-## User story statement (Mandatory)
+## User story statement
 
+<!-- Mandatory part -->
 <!-- Describe the user story -->
 
 As ...
-
-I wish to ...
-
-In order to ...
+I want to ...
+So that ...
 
 
-## Context (Optional)
+## Context
 
+<!-- Optional part -->
 <!-- Give additional context  -->
 
 
-## Acceptance tests (Mandatory)
+## Acceptance tests
 
-<!-- Explain your expectations  -->
+<!-- Mandatory part  -->
+<!-- Detail your expectations  -->
 
 
-## Technical leads (Optional)
+## Technical leads
 
+<!-- Optional part -->
 <!-- Suggests ways to resolve this issue -->
