@@ -15,6 +15,7 @@ Components enabled:
 
 - [ ] DCR
 - [ ] GPU
+- [ ] Explore
 - [ ] Superset
 - [ ] Clickhouse
 - [ ] Dagster
@@ -32,6 +33,7 @@ Components enabled:
 - [ ] create and update the [Infra Checklist](https://docs.google.com/spreadsheets/d/1Gxq5VccU9CyndQLhILy2upkEj58E3iC8qxXZIowHT4E/edit?gid=0#gid=0)
 - [ ] create the network matrix from the [template](https://docs.google.com/spreadsheets/d/1DmaULtgDDKnj5_9cpxtTMeu2dCMGq7lOGWmJu67blDI/edit?gid=0#gid=0)
 - [ ] record the new environment in the [env summary](https://docs.google.com/spreadsheets/d/1F_vPzAkQai56mJirW4nuIr4HnAOnrGgGtypJUDHQiHs/edit?gid=0#gid=0)
+- [ ] create the ["How to connect" page](https://www.notion.so/arkhn/Hospital-access-How-to-connect-to-cde891dea219407f90182dd1a7373c90?source=copy_link)
 
 ## Deployment
 
@@ -41,4 +43,14 @@ Components enabled:
 - [ ] [Install Arkhn CLI](https://www.notion.so/arkhn/Installation-procedure-ea3aa3e34c7845bea611a80445c77b85?source=copy_link)
 - [ ] Deploy Neogeo
 - [ ] Deploy ArgoCD Apps
+- [ ] Record passwords in bitwarden:
+    - argocd
+    - keycloak
+    - clickhouse datalake
+    - cloudbeaver
+    - vault token
+    - minio
+- [ ] Configure the metrics remote writing toward AZmonitoring
+- [ ] Configure TLS
+- [ ] Create the corresponding repository dagster-code- on dockerhub
 
