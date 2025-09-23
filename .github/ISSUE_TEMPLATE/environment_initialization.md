@@ -29,6 +29,7 @@ Components enabled:
 
 ## Documentation
 
+- [ ] create and update the [Infra Checklist](https://docs.google.com/spreadsheets/d/1Gxq5VccU9CyndQLhILy2upkEj58E3iC8qxXZIowHT4E/edit?gid=0#gid=0)
 - [ ] create the network matrix from the [template](https://docs.google.com/spreadsheets/d/1DmaULtgDDKnj5_9cpxtTMeu2dCMGq7lOGWmJu67blDI/edit?gid=0#gid=0)
 - [ ] record the new environment in the [env summary](https://docs.google.com/spreadsheets/d/1F_vPzAkQai56mJirW4nuIr4HnAOnrGgGtypJUDHQiHs/edit?gid=0#gid=0)
 
