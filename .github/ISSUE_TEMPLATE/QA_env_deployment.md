@@ -33,7 +33,7 @@ Infra team:
 Documentation (Infra team)
 - [ ] _matrice de flux_ is up to date has been shared with the client and can be found in Arkhn drive or Notion for this project
 - [ ] [recapitulatif de nos environnements](https://docs.google.com/spreadsheets/d/1F_vPzAkQai56mJirW4nuIr4HnAOnrGgGtypJUDHQiHs/edit?gid=0#gid=0) has been updated
-- [ ] in "récapitulatif de nos environnements", the tab "procédured e sauvegardes" has been filled with the backup procedure for this project. If the is no backup procedure for this env, a ticket is open for this. 
+- [ ] in "récapitulatif de nos environnements", the tab "procédure de sauvegardes" has been filled with the backup procedure for this project. If the is no backup procedure for this env, a ticket is open for this. 
 
 Data team:
 - [ ] Connection to the platform has been tested
