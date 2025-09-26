@@ -8,7 +8,7 @@ about: List of verification steps on a new environment
 
 # Acceptance tests
 <!-- Mandatory -->
-
+kk
 Infra team:
 - [ ] The "How to connect" page is created
 - [ ] Presence of necessary passwords in bitwarden:
