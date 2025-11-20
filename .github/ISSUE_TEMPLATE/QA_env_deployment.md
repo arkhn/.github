@@ -36,9 +36,23 @@ Documentation (Infra team)
 - [ ] in "récapitulatif de nos environnements", the tab "procédure de sauvegardes" has been filled with the backup procedure for this project. If the is no backup procedure for this env, a ticket is open for this. 
 
 Data team:
-- [ ] Connection to the platform has been tested
-- [ ] Test connection to various tools (at least keykloack, cloudbeaver, code-server)
-- In code-server, test:
-    - [ ] git clone
-    - [ ] dbt debug
-    - [ ] dbt deps
+- Coder workspace:
+    - [ ] cloudbeaver: the datalake is present
+    - code-server: <specify the method: ssh or token>
+        - [ ] Clone the 3 repositories (codex, dagster, deployment-hospital)
+        - [ ] venv and .env are automatically created
+        - [ ] deployment-hospital is up to date (with the latest versions of dagster and codex)
+        - [ ] dbt debug runs successfully (inside the .venv)
+        - [ ] dbt deps runs successfully
+        - [ ] dbt build runs successfully (activate OMOP models, which also checks for the presence of omop_extended tables)
+
+- Dagster/Dagit/ArgoCD:
+    - [ ] Connection is possible
+    - [ ] Deployment of dagster-code and dagster-code-dev is successful
+    - [ ] Run "run all" on both prod and dev on Dagit
+
+- Datalake:
+    - [ ] The tables are present in the datalake after the "run_all" on prod and dev
+
+- Arkhn interface:
+    - [ ] dbt docs is accessible
