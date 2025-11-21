@@ -37,22 +37,27 @@ Documentation (Infra team)
 
 Data team:
 - Coder workspace:
-    - [ ] cloudbeaver: the datalake is present
     - code-server: <specify the method: ssh or token>
-        - [ ] Clone the 3 repositories (codex, dagster, deployment-hospital)
+        - [ ] clone the 3 repositories (codex, dagster, deployment-hospital)
         - [ ] venv and .env are automatically created
-        - [ ] deployment-hospital is up to date (with the latest versions of dagster and codex)
-        - [ ] dbt debug runs successfully (inside the .venv)
+        - [ ] deployment-hospital is up to date (with the latest versions of deployment-template, dagster and codex)
+        - [ ] dbt debug runs successfully
         - [ ] dbt deps runs successfully
         - [ ] dbt build runs successfully (activate OMOP models, which also checks for the presence of omop_extended tables)
 
-- Dagster/Dagit/ArgoCD:
-    - [ ] Connection is possible
-    - [ ] Deployment of dagster-code and dagster-code-dev is successful
-    - [ ] Run "run all" on both prod and dev on Dagit
+    - cloudbeaver: 
+        - [ ] the connection to the datalake is automatically added
+        - [ ] the connection is working
+        - [ ] the tables are present in the datalake after the "run_all" on prod and dev (cf Dagster/Dagit point )
+        
+- ArgoCD:
+    - [ ] connection is working
+    - [ ] deployment of dagster-code and dagster-code-dev is successful
 
-- Datalake:
-    - [ ] The tables are present in the datalake after the "run_all" on prod and dev
+- Dagster/Dagit:
+    - [ ] connection is working
+    - [ ] run "run all" on both prod and dev on Dagit
 
 - Arkhn interface:
     - [ ] dbt docs is accessible
+    - [ ] dataset previsualisation is working
