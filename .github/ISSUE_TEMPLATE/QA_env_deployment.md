@@ -29,6 +29,7 @@ Infra team:
 - [ ] Verify the metrics are pushed in AZmonitoring
 - [ ] Verify the TLS is configured (no auto-signed certificate)
 - [ ] Create the corresponding repository dagster-code- on dockerhub
+- [ ] Specify the method to use to create a workspace in coder (SSH key or token) in the README and the how to connect page
 
 Documentation (Infra team)
 - [ ] _matrice de flux_ is up to date has been shared with the client and can be found in Arkhn drive or Notion for this project
@@ -37,7 +38,7 @@ Documentation (Infra team)
 
 Data team:
 - Coder workspace:
-    - code-server: <specify the method: ssh or token>
+    - code-server:
         - [ ] clone the 3 repositories (codex, dagster, deployment-hospital)
         - [ ] venv and .env are automatically created
         - [ ] deployment-hospital is up to date (with the latest versions of deployment-template, dagster and codex)
