@@ -30,6 +30,7 @@ Infra team:
 - [ ] Verify the TLS is configured (no auto-signed certificate)
 - [ ] Create the corresponding repository dagster-code- on dockerhub
 - [ ] Specify the method to use to create a workspace in coder (SSH key or token) in the README and the how to connect page
+- [ ] Specify if keycloak is synchronized with the hospital's Active Directory (LDAP/AD)
 
 Documentation (Infra team)
 - [ ] _matrice de flux_ is up to date has been shared with the client and can be found in Arkhn drive or Notion for this project
