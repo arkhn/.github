@@ -5,20 +5,9 @@ about: List of actions for upgrading a production environment
 
 ## List of environments to upgrade
 
-- [ ] Reims prod
-- [ ] Strasbourg prod
-- [ ] Metz
-- [ ] Besançon
-- [ ] Nice
-- [ ] Vivalto
-- [ ] Oncolab
-- [ ] Clermont EDD
-- [ ] Toulouse
-- [ ] AHP EDD
-- [ ] HCL
-- [ ] CHUGA
-- [ ] DevD2H
-- [ ] La Réunion
+<!-- list of environments to upgrage -->
+<!-- Check the list [here](https://www.notion.so/arkhn/202c482aa61b45f4af01996a4c28b0ea?v=25b25d5d043a46098324961841f5187b&source=copy_link) -->
+
 
 ## Package to deploy
 
