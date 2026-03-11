@@ -20,11 +20,12 @@ Components enabled:
 - [ ] Clickhouse
 - [ ] Dagster
 - [ ] Coder
+- [ ] MatchID
 
 
 ## Preflight checklist
 
-- [ ] run the [compliance script](https://github.com/arkhn/helm-charts/tree/main/compliance) on all machines
+- [ ] run the [preflight script](https://github.com/arkhn/cli/tree/main) on all machines
 - [ ] Record the script output in the comments of the current issue
 
 
@@ -52,5 +53,5 @@ Components enabled:
     - minio
 - [ ] Configure the metrics remote writing toward AZmonitoring
 - [ ] Configure TLS
+- [ ] Configure backups (don't forget the related tab in the environnement inventory)
 - [ ] Create the corresponding repository dagster-code- on dockerhub
-
