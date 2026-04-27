@@ -13,7 +13,7 @@ about: List of action for setting a new environment
 <!-- Precise which components/apps must be deployed -->
 Components enabled:
 
-- [ ] DCR
+- [ ] DCR + Local Nexus
 - [ ] GPU
 - [ ] Explore
 - [ ] Superset
@@ -21,13 +21,13 @@ Components enabled:
 - [ ] Dagster
 - [ ] Coder
 - [ ] MatchID
-
+- [ ] Nerd
+- [ ] Datahub
 
 ## Preflight checklist
 
 - [ ] run the [preflight script](https://github.com/arkhn/cli/tree/main) on all machines
-- [ ] Record the script output in the comments of the current issue
-
+- [ ] Save the script output in the comments of the current issue
 
 ## Documentation
 
@@ -48,10 +48,30 @@ Components enabled:
     - argocd
     - keycloak
     - clickhouse datalake
-    - cloudbeaver
+    - coder
     - vault token
     - minio
 - [ ] Configure the metrics remote writing toward AZmonitoring
 - [ ] Configure TLS
+- [ ] Configure [SSO](https://www.notion.so/arkhn/Connexion-OIDC-avec-un-tablissement-2b6403a7adf38067a27fc5a528f3364e?source=copy_link) (OIDC or SAML ) or LDAP
+- [ ] Configure [SFTP](https://www.notion.so/arkhn/Serveur-SFTP-2f5403a7adf380448cc4d2026c543ce3?source=copy_link)
 - [ ] Configure backups (don't forget the related tab in the environnement inventory)
 - [ ] Create the corresponding repository dagster-code- on dockerhub
+
+## QA Checklist
+
+- [ ] Run the compliance script and save the output in the comments of the current issue
+- [ ] Verify that data storages (Clickhouse, MinIO, Logs) are in line with client's requirements
+- [ ] Check if at least 2 people can work at the same time
+- [ ] Verify we can connect to the main web components from the Bastion or the dev workstation:
+    - Arkhn admin
+    - dagit
+    - coder (workspace creation test)
+    - keycloak (admin)
+    - grafana
+    - DCR (test connection to local admin)
+- [ ] Verify the metrics are pushed in AZmonitoring
+- [ ] Verify we can download packages from the DCR (internal nexus enabled)
+- [ ] Verify the TLS is configured (no auto-signed certificate)
+- [ ] Specify the method to use to create a workspace in coder (SSH key or token) in the README and the how to connect page
+- [ ] Specify if keycloak is synchronized with the hospital's Active Directory (LDAP/AD) or connected to the hospital's SSO
