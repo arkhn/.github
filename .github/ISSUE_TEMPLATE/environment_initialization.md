@@ -14,7 +14,8 @@ about: List of action for setting a new environment
 Components enabled:
 
 - [ ] DCR + Local Nexus
-- [ ] GPU
+- [ ] GPU for DCR
+- [ ] GPU for Dagster
 - [ ] Explore
 - [ ] Superset
 - [ ] Clickhouse
