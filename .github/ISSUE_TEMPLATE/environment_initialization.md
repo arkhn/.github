@@ -65,12 +65,13 @@ Components enabled:
 - [ ] Verify that data storages (Clickhouse, MinIO, Logs) are in line with client's requirements
 - [ ] Check if at least 2 people can work at the same time
 - [ ] Verify we can connect to the main web components from the Bastion or the dev workstation:
-    - Arkhn admin
+    - Arkhn admin with Keycloak SSO
     - dagit
     - coder (workspace creation test)
     - keycloak (admin)
-    - grafana
+    - grafana with Keycloak SSO
     - DCR (test connection to local admin)
+    - Vault UI with Keycloak SSO
 - [ ] Verify the metrics are pushed in AZmonitoring
 - [ ] Verify we can download packages from the DCR (internal nexus enabled)
 - [ ] Verify the TLS is configured (no auto-signed certificate)
