@@ -75,5 +75,4 @@ Components enabled:
 - [ ] Verify the metrics are pushed in AZmonitoring
 - [ ] Verify we can download packages from the DCR (internal nexus enabled)
 - [ ] Verify the TLS is configured (no auto-signed certificate)
-- [ ] Specify the method to use to create a workspace in coder (SSH key or token) in the README and the how to connect page
 - [ ] Specify if keycloak is synchronized with the hospital's Active Directory (LDAP/AD) or connected to the hospital's SSO
