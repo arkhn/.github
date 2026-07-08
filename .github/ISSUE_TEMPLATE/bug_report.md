@@ -28,3 +28,7 @@ labels: "type/bug, prio/high"
 
 ## Resolution
 <!-- Bug fix suggestion -->
+
+## Defintion of Done
+
+Cf. [DoD for support issues](https://app.notion.com/p/arkhn/Definition-of-Done-for-Support-issues-392403a7adf38024826cc8476545e262?source=copy_link)
