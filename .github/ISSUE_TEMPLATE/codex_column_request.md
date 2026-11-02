@@ -19,34 +19,39 @@ labels: "type/mapping"
 
 <!-- Look in the existing pvt_* models for columns the data can be computed from. -->
 
-- [ ] **Yes**: no Codex change, stop here. In the hospital repo, create `dbt/models/pivot/extended/pvt_<domain>_extended.sql`: it selects every column of the Codex `pvt_<domain>` and adds the transformed one. Local project models read `pvt_<domain>_extended` instead of `pvt_<domain>`.
-- [ ] **No**: go on.
+If yes, no Codex change: in the hospital repo, create `dbt/models/pivot/extended/pvt_<domain>_extended.sql`. It selects every column of the Codex `pvt_<domain>` and adds the transformed one. Local project models read `pvt_<domain>_extended` instead of `pvt_<domain>`.
 
-<!--
-Example: month of birth, computed from birth_datetime.
+Example: month of death, computed from `death_datetime`.
 
--- dbt/models/pivot/extended/pvt_patient_extended.sql
+```sql
+-- dbt/models/pivot/extended/pvt_death_extended.sql
 select
     *,
-    toMonth(birth_datetime) as month_of_birth
-from {{ ref('pvt_patient') }}
--->
+    toMonth(death_datetime) as month_of_death
+from {{ ref('pvt_death') }}
+```
+
+- [ ] **Yes**: create the extended model above, stop here.
+- [ ] **No**: go on.
 
 
 ## 2. Is the column relevant for every source?
 
-<!-- A request from one hospital is usually enough to show the column is relevant. -->
+Most of the time, yes: a request from one hospital is usually enough to show the column is relevant. It still depends on the domain: data that only one software records belongs in `pvt_observation`.
+
+Example: a smoking status only recorded in the patient form of one software becomes one `pvt_observation` row per patient, with `observation_source_value = 'smoking_status'` and `value_as_string = 'former smoker'`. Mediboard already maps its vital signs this way, one row per variable.
 
 - [ ] **Yes**: add the column to the Codex pivot contract. Every source-pivot emits it as `null::Nullable(T)`, the requesting source fills it.
-- [ ] **No**: the data is specific to this source. Map it to `pvt_observation`, or keep it in the hospital repo under `dbt/models/pivot/extended/`.
+- [ ] **No**: map the data to `pvt_observation` in the Codex source-pivot of the requesting source.
 
 
-## 3. Raw column
+## 3. Need for a new raw column
 
-<!-- Whatever the answer above, the column has to be available in raw. -->
+Whatever the answer to question 2, the column is added on the Codex side.
 
 - [ ] The column is added to the Codex raw model of the source.
-- [ ] The pivot is updated: Codex `models/pivot/` (case **Yes** above) or hospital `dbt/models/pivot/extended/` (case **No**).
+- [ ] The column is added to the Codex staging model of the source.
+- [ ] The pivot is updated: `pvt_<domain>` contract (question 2 **Yes**) or `pvt_observation` (question 2 **No**).
 
 
 ## Acceptance tests
