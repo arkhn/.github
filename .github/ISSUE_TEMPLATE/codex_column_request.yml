@@ -25,7 +25,7 @@ body:
     id: decision
     attributes:
       label: Decision
-      description: Where the column goes, decided by the data team with [14_contrib_new_pivot_column.md](https://github.com/arkhn/codex/blob/main/documentation/14_contrib_new_pivot_column.md).
+      description: Where the column goes, see [14_contrib_new_pivot_column.md](https://github.com/arkhn/codex/blob/main/documentation/14_contrib_new_pivot_column.md).
       options:
         - Transformation of existing pivot data, in pvt_<domain>_extended
         - Relevant for every source, new column in the pvt_<domain> contract
@@ -37,11 +37,21 @@ body:
     id: acceptance-tests
     attributes:
       label: Acceptance tests
+      description: Depending on the decision, keep the matching tests and remove the others.
       value: |
         - [ ] The column is in the raw and staging models of the source
-        - [ ] The column is in the pivot model of the decision and filled for the requesting source
         - [ ] Fixtures and unit tests cover the new column
-        - [ ] `dbt build` passes on the pivot model
         - [ ] The hospital has checked the values on its data
+
+        Transformation of existing pivot data:
+        - [ ] `pvt_<domain>_extended` outputs every `pvt_<domain>` column plus the new one
+
+        Relevant for every source:
+        - [ ] The column is in the `pvt_<domain>` contract
+        - [ ] The requesting source-pivot fills it, every other source-pivot outputs it empty
+        - [ ] `dbt build` passes on `pvt_<domain>`
+
+        Recorded by one software only:
+        - [ ] The requesting source-pivot outputs one `pvt_observation` row per value
     validations:
       required: true
