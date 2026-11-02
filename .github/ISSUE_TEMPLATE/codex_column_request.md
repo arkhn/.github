@@ -26,7 +26,7 @@ labels: "type/mapping"
   ```sql
   -- dbt/models/pivot/extended/pvt_death_extended.sql
   select
-      {{ dbt_utils.star(from=ref('pvt_death'), quote_identifiers=False) }},
+      {{ dbt_utils.star(from=ref('pvt_death')) }},
       toMonth(death_datetime) as month_of_death
   from {{ ref('pvt_death') }}
   ```
