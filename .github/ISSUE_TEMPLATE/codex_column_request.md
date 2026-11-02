@@ -26,7 +26,7 @@ Example: month of death, computed from `death_datetime`.
 ```sql
 -- dbt/models/pivot/extended/pvt_death_extended.sql
 select
-    *,
+    {{ dbt_utils.star(from=ref('pvt_death'), quote_identifiers=False) }},
     toMonth(death_datetime) as month_of_death
 from {{ ref('pvt_death') }}
 ```
