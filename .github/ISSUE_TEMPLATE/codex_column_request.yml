@@ -1,0 +1,47 @@
+name: Codex column request
+description: A hospital needs a piece of data the Codex pivot does not expose yet
+labels: ["type/mapping"]
+body:
+  - type: textarea
+    id: column
+    attributes:
+      label: Column
+      description: What the hospital needs and where it comes from.
+      value: |
+        | | |
+        |---|---|
+        | Hospital | |
+        | Data needed | |
+        | Use | |
+        | Pivot domain | |
+        | Software | |
+        | Table and column | |
+        | Type and example values | |
+        | Fill rate | |
+    validations:
+      required: true
+
+  - type: dropdown
+    id: decision
+    attributes:
+      label: Decision
+      description: Where the column goes, decided by the data team with [14_contrib_new_pivot_column.md](https://github.com/arkhn/codex/blob/main/documentation/14_contrib_new_pivot_column.md).
+      options:
+        - Transformation of existing pivot data, in pvt_<domain>_extended
+        - Relevant for every source, new column in the pvt_<domain> contract
+        - Recorded by one software only, in pvt_observation
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-tests
+    attributes:
+      label: Acceptance tests
+      value: |
+        - [ ] The column is in the raw and staging models of the source
+        - [ ] The column is in the pivot model of the decision and filled for the requesting source
+        - [ ] Fixtures and unit tests cover the new column
+        - [ ] `dbt build` passes on the pivot model
+        - [ ] The hospital has checked the values on its data
+    validations:
+      required: true
