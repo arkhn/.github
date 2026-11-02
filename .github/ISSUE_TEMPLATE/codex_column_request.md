@@ -33,7 +33,6 @@ from {{ ref('pvt_patient') }}
 -->
 
 
-
 ## 2. Is the column relevant for every source?
 
 <!-- A request from one hospital is usually enough to show the column is relevant. -->
