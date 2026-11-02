@@ -5,7 +5,7 @@ title: ''
 labels: "type/mapping"
 ---
 
-## Need (Mandatory)
+## Need
 
 <!-- Which hospital, which data, for which use (project, OMOP, Explore...). -->
 
@@ -15,7 +15,7 @@ labels: "type/mapping"
 - Source software and table/column:
 
 
-## 1. Can the data be obtained by a transformation of existing pivot data? (Mandatory)
+## 1. Can the data be obtained by a transformation of existing pivot data?
 
 <!-- Look in the existing pvt_* models for columns the data can be computed from. -->
 
@@ -34,7 +34,7 @@ from {{ ref('pvt_patient') }}
 
 
 
-## 2. Is the column relevant for every source? (Mandatory)
+## 2. Is the column relevant for every source?
 
 <!-- A request from one hospital is usually enough to show the column is relevant. -->
 
@@ -42,7 +42,7 @@ from {{ ref('pvt_patient') }}
 - [ ] **No**: the data is specific to this source. Map it to `pvt_observation`, or keep it in the hospital repo under `dbt/models/pivot/extended/`.
 
 
-## 3. Raw column (Mandatory)
+## 3. Raw column
 
 <!-- Whatever the answer above, the column has to be available in raw. -->
 
@@ -50,11 +50,11 @@ from {{ ref('pvt_patient') }}
 - [ ] The pivot is updated: Codex `models/pivot/` (case **Yes** above) or hospital `dbt/models/pivot/extended/` (case **No**).
 
 
-## Acceptance tests (Mandatory)
+## Acceptance tests
 
 <!-- Explain your expectations. -->
 
 
-## Technical leads (Optional)
+## Technical leads
 
 <!-- Suggest ways to resolve this issue. -->
