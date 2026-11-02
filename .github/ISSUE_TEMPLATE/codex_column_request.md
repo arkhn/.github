@@ -15,12 +15,23 @@ labels: "type/mapping"
 - Source software and table/column:
 
 
-## 1. Is the data already in the pivot? (Mandatory)
+## 1. Can the data be obtained by a transformation of existing pivot data? (Mandatory)
 
-<!-- Look for the data, or something it can be computed from, in the existing pvt_* models. -->
+<!-- Look in the existing pvt_* models for columns the data can be computed from. -->
 
-- [ ] **Yes**: it is a transformation of existing pivot columns. Do it in the hospital repo, under `dbt/models/pivot/extended/`. No Codex change, stop here.
+- [ ] **Yes**: no Codex change, stop here. In the hospital repo, create `dbt/models/pivot/extended/pvt_<domain>_extended.sql`: it selects every column of the Codex `pvt_<domain>` and adds the transformed one. Local project models read `pvt_<domain>_extended` instead of `pvt_<domain>`.
 - [ ] **No**: go on.
+
+<!--
+Example: month of birth, computed from birth_datetime.
+
+-- dbt/models/pivot/extended/pvt_patient_extended.sql
+select
+    *,
+    toMonth(birth_datetime) as month_of_birth
+from {{ ref('pvt_patient') }}
+-->
+
 
 
 ## 2. Is the column relevant for every source? (Mandatory)
