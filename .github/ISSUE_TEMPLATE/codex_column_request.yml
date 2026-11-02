@@ -21,15 +21,11 @@ body:
     validations:
       required: true
 
-  - type: markdown
-    attributes:
-      value: |
-        Where the column goes is decided with [14_contrib_new_pivot_column.md](https://github.com/arkhn/codex/blob/main/documentation/14_contrib_new_pivot_column.md).
-
   - type: dropdown
     id: decision
     attributes:
       label: Decision
+      description: Where the column goes, see [14_contrib_new_pivot_column.md](https://github.com/arkhn/codex/blob/main/documentation/14_contrib_new_pivot_column.md).
       options:
         - 1. Transformation of existing pivot data, in pvt_<domain>_extended
         - 2. Relevant for every source, new column in the pvt_<domain> contract
