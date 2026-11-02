@@ -35,7 +35,7 @@ body:
         - Relevant for every source, new column in the pvt_<domain> contract
         - Recorded by one software only, in pvt_observation
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: acceptance-tests
