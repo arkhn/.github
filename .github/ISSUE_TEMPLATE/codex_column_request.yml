@@ -31,9 +31,9 @@ body:
     attributes:
       label: Decision
       options:
-        - Transformation of existing pivot data, in pvt_<domain>_extended
-        - Relevant for every source, new column in the pvt_<domain> contract
-        - Recorded by one software only, in pvt_observation
+        - 1. Transformation of existing pivot data, in pvt_<domain>_extended
+        - 2. Relevant for every source, new column in the pvt_<domain> contract
+        - 3. Recorded by one software only, in pvt_observation
     validations:
       required: true
 
@@ -43,19 +43,20 @@ body:
       label: Acceptance tests
       description: Depending on the decision, keep the matching tests and remove the others.
       value: |
-        - [ ] The column is in the raw and staging models of the source
         - [ ] Fixtures and unit tests cover the new column
         - [ ] The hospital has checked the values on its data
 
-        Transformation of existing pivot data:
+        1. Transformation of existing pivot data:
         - [ ] `pvt_<domain>_extended` outputs every `pvt_<domain>` column plus the new one
 
-        Relevant for every source:
+        2. Relevant for every source:
+        - [ ] The column is in the raw and staging models of the source
         - [ ] The column is in the `pvt_<domain>` contract
         - [ ] The requesting source-pivot fills it, every other source-pivot outputs it empty
         - [ ] `dbt build` passes on `pvt_<domain>`
 
-        Recorded by one software only:
+        3. Recorded by one software only:
+        - [ ] The column is in the raw and staging models of the source
         - [ ] The requesting source-pivot outputs one `pvt_observation` row per value
     validations:
       required: true
