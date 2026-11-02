@@ -37,9 +37,19 @@ from {{ ref('pvt_death') }}
 
 ## 2. Is the column relevant for every source?
 
-Most of the time, yes: a request from one hospital is usually enough to show the column is relevant. It still depends on the domain: data that only one software records belongs in `pvt_observation`.
+Most of the time, **yes: a request from one hospital is usually enough to show the column is relevant**. It still depends on the domain: if the data is only recorded by one software, it belongs in `pvt_observation`.
 
-Example: a smoking status only recorded in the patient form of one software becomes one `pvt_observation` row per patient, with `observation_source_value = 'smoking_status'` and `value_as_string = 'former smoker'`. Mediboard already maps its vital signs this way, one row per variable.
+Example: a smoking status only recorded in the patient form of one software becomes one `pvt_observation` row per patient. Mediboard already maps its vital signs this way, one row per variable.
+
+```sql
+-- models/source/<software>/pivot/clinical/<software>_pvt_observation.sql
+select
+    ...
+    'smoking_status' as observation_source_value,
+    smoking_status as value_as_string,  -- e.g. 'former smoker'
+    ...
+from {{ ref('<software>_stg_patient') }}
+```
 
 - [ ] **Yes**: add the column to the Codex pivot contract. Every source-pivot emits it as `null::Nullable(T)`, the requesting source fills it.
 - [ ] **No**: map the data to `pvt_observation` in the Codex source-pivot of the requesting source.
