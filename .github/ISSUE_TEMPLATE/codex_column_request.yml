@@ -1,0 +1,58 @@
+name: Codex column request
+description: A hospital needs a piece of data the Codex pivot does not expose yet
+labels: ["type/mapping"]
+body:
+  - type: textarea
+    id: column
+    attributes:
+      label: Column
+      description: What the hospital needs and where it comes from.
+      value: |
+        | | |
+        |---|---|
+        | Hospital | |
+        | Data needed | |
+        | Use | |
+        | Pivot domain | |
+        | Software | |
+        | Table and column | |
+        | Type and example values | |
+        | Fill rate | |
+    validations:
+      required: true
+
+  - type: dropdown
+    id: decision
+    attributes:
+      label: Decision
+      description: Where the column goes, see [14_contrib_new_pivot_column.md](https://github.com/arkhn/codex/blob/main/documentation/14_contrib_new_pivot_column.md).
+      options:
+        - 1. Transformation of existing pivot data, in pvt_<domain>_extended
+        - 2. Relevant for every source, new column in the pvt_<domain> contract
+        - 3. Recorded by one software only, in pvt_observation
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-tests
+    attributes:
+      label: Acceptance tests
+      description: Depending on the decision, keep the matching tests and remove the others.
+      value: |
+        - [ ] Fixtures and unit tests cover the new column
+        - [ ] The hospital has checked the values on its data
+
+        1. Transformation of existing pivot data:
+        - [ ] `pvt_<domain>_extended` outputs every `pvt_<domain>` column plus the new one
+
+        2. Relevant for every source:
+        - [ ] The column is in the raw and staging models of the source
+        - [ ] The column is in the `pvt_<domain>` contract
+        - [ ] The requesting source-pivot fills it, every other source-pivot outputs it empty
+        - [ ] `dbt build` passes on `pvt_<domain>`
+
+        3. Recorded by one software only:
+        - [ ] The column is in the raw and staging models of the source
+        - [ ] The requesting source-pivot outputs one `pvt_observation` row per value
+    validations:
+      required: true
