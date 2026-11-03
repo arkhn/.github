@@ -12,6 +12,7 @@ type: "Task"
 | Environment | |
 | Domain | |
 | Source software | |
+| Source of truth for this domain | |
 
 
 ## Context
