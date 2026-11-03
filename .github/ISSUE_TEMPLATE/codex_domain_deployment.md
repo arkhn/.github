@@ -1,29 +1,32 @@
 ---
 name: Codex domain deployment
-about: Add a domain from a source software to the Codex and deploy it in a hospital
-title: '[<Source>] add <domain> domain'
+about: Deploy a Codex domain from a source software in a hospital
+title: '[<Hospital>] Deploy <domain> x <Source software>'
 type: "Task"
 ---
 
-## User story statement & Context
+## User story statement
 
-<!-- Quel domaine, depuis quel logiciel, pour quel(s) client(s), et pour quel usage (projection, étude...). Lier les issues prérequises (domaines dont celui-ci dépend) et les mappings existants s'il y en a. -->
+| | |
+|---|---|
+| Environment | |
+| Domain | |
+| Source software | |
 
-Ajouter ... de <Source> au Codex
-Clients concernés : ...
+
+## Context
+
+- Notion meeting notes (if applicable):
+- People to notify:
 
 
 ## Acceptance tests (Mandatory)
 
-Codex :
-- [ ] Ajouter `<source>_pvt_<domain>` au Codex, avec tests unitaires et fixtures
-- [ ] Colonnes PII taguées (`pii`, `not_salted`, `gen_and_loc`)
-
-Déploiement à <hôpital> :
-- [ ] Montée de version du Codex et ajout de la source dans `pivot_source_<domain>` (l'ordre décide de la déduplication)
-- [ ] Run dev puis prod OK (codex + dagster), tests verts
-- [ ] Volumétrie cohérente entre raw, staging et pivot, sans perte de lignes pour les autres sources du domaine
-- [ ] Données validées sur un échantillon (avec l'hôpital si besoin)
+- [ ] The environment runs the latest Codex and Dagster versions
+- [ ] The acceptance testing sheet is shared
+- [ ] The model is deployed
+- [ ] If applicable, the admin models are enabled
+- [ ] If applicable, the explore models are enabled
 
 
 ## Technical leads (Optional)
