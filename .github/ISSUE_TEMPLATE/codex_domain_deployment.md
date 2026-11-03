@@ -20,7 +20,7 @@ type: "Task"
 - People to notify:
 
 
-## Acceptance tests (Mandatory)
+## Acceptance tests
 
 - [ ] The environment runs the latest Codex and Dagster versions
 - [ ] The acceptance testing sheet is shared
