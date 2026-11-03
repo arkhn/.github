@@ -24,9 +24,12 @@ type: "Task"
 
 - [ ] The environment runs the latest Codex and Dagster versions
 - [ ] The acceptance testing sheet is shared
-- [ ] The model is deployed
-- [ ] If applicable, the admin models are enabled
-- [ ] If applicable, the explore models are enabled
+- [ ] The model `pvt_<domain>` is deployed
+
+Optional:
+<!-- Delete the lines that do not apply to this deployment. -->
+- [ ] The admin models are enabled
+- [ ] The explore models are enabled
 
 
 ## Technical leads (Optional)
