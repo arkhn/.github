@@ -10,14 +10,14 @@ body:
       value: |
         | | |
         |---|---|
-        | Hospital | |
-        | Data needed | |
-        | Use | |
-        | Pivot domain | |
-        | Software | |
-        | Table and column | |
-        | Type and example values | |
-        | Fill rate | |
+        | **Hospital** | |
+        | **Data needed** | |
+        | **Use** | |
+        | **Pivot domain** | |
+        | **Software** | |
+        | **Table and column** | |
+        | **Type and example values** | |
+        | **Fill rate** | |
     validations:
       required: true
 
@@ -41,6 +41,8 @@ body:
       value: |
         - [ ] Fixtures and unit tests cover the new column
         - [ ] The hospital has checked the values on its data
+
+        <!-- Keep only the tests matching the decision above, remove the others. -->
 
         1. Transformation of existing pivot data:
         - [ ] `pvt_<domain>_extended` outputs every `pvt_<domain>` column plus the new one
